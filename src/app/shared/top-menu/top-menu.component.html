@@ -1,0 +1,16 @@
+<div class="top-menu">
+  <div class="top-menu-links">
+    <span class="logo" >TastyBurger</span>
+    <button (click)="onSelectCategory('burgers')" class="link" [class.selected]="selectedCategory === 'burgers'">Burgers</button>
+    <button (click)="onSelectCategory('drinks')" class="link" [class.selected]="selectedCategory === 'drinks'">Drinks</button>
+    <!-- <a routerLink="/contact">Extras</a> -->
+  </div>
+  <div class="top-menu-cart">
+    <button (click)="openFloatingCart()" [class.selected-cart]="floatingCart">
+      <i class="ri-shopping-cart-line"></i>
+      <span class="cart-count">{{ count }}</span>
+    </button>
+  </div>
+</div>
+<app-floating-cart *ngIf="floatingCart"></app-floating-cart>
+<div class="mask" *ngIf="floatingCart"></div>

@@ -1,0 +1,44 @@
+<div class="floating-cart">
+  <div class="container">
+    <div class="floating-cart-header">
+      <h3>Items In Cart</h3>
+    </div>
+    <div class="floating-cart-content">
+      <div class="table-header">
+        <div class="item-image"></div>
+        <div class="item-name">Item</div>
+        <div class="item-price">Price</div>
+        <div class="item-quantity">Quantity</div>
+        <div class="item-total">Total</div>
+      </div>
+      <div class="cart-item" *ngFor="let item of cartItems">
+        <div class="item-image">
+          <img [src]="item.image" alt="item.name" />
+        </div>
+        <div class="item-name">
+          <p class="item-name">{{ item.name }}</p>
+        </div>
+        <div class="item-price">
+          <span class="item-price">{{ price | currency }}</span>
+        </div>
+        <div class="item-quantity">
+          <button (click)="onSubItem()"><i class="ri-arrow-drop-down-line"></i></button>
+          <span>{{ count }}</span>
+          <button (click)="onAddItem()"><i class="ri-arrow-drop-up-line"></i></button>
+        </div>
+        <div class="item-total">
+          <span>{{ price * count | currency }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="cart-totals">
+      <p>Subtotal: <span>$5.25</span></p>
+      <p>Taxes: <span>$0.45</span></p>
+      <p>Total: <span class="total">$5.70</span></p>
+    </div>
+    <div class="actions">
+      <button class="btn btn-secondary">View Cart</button>
+      <button class="btn btn-primary">Checkout</button>
+    </div>
+  </div>
+</div>

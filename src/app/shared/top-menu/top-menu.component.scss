@@ -1,0 +1,79 @@
+.top-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  .top-menu-links {
+    height: 50px;
+    width: 30%;
+    display: flex;
+    button, span {
+      font-size: 1.2rem;
+      color: var(--primary);
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-decoration: none;
+      height: 100%;
+      transition: all 0.3s ease-in-out;
+    }
+    .link {
+      border: solid 1px var(--primary);
+      cursor: pointer;
+      &:hover {
+        color: var(--font-dark);
+      }
+    }
+    .selected {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  }
+  .top-menu-cart {
+    height: 50px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    button {
+      border: solid 1px var(--primary);
+      font-size: 1.2rem;
+      color: var(--primary);
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      &:hover {
+        color: var(--font-dark);
+      }
+      span {
+        position: relative;
+        top: -5px;
+        left: 5px;
+      }
+    }
+    .selected-cart {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  }
+}
+
+.mask {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
