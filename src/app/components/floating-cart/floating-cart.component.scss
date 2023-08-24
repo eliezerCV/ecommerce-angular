@@ -138,7 +138,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    button {
+    a {
       padding: 10px 20px;
       border: none;
       cursor: pointer;
@@ -146,6 +146,8 @@
       font-weight: bold;
       color: #fff;
       border-radius: 5px;
+      letter-spacing: 1px;
+      text-decoration: none;
       &:first-of-type {
         background-color: var(--dark-gray);
       }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-menu',
@@ -10,9 +11,12 @@ export class TopMenuComponent implements OnInit {
   count: number = 2;
   selectedCategory: string = 'burgers';
   floatingCart: boolean = false;
+  currentRoute: string = '';
 
-  constructor() { }
-  ngOnInit(): void {}
+  constructor(private router: Router) { }
+  ngOnInit(): void {
+    this.currentRoute = this.router.url;
+  }
 
   onSelectCategory(category: string): void {
     this.selectedCategory = category;

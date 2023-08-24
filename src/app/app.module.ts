@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TopMenuComponent } from './shared/top-menu/top-menu.component';
 import { ProductComponent } from './components/product/product.component';
 import { FloatingCartComponent } from './components/floating-cart/floating-cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FloatingCartComponent } from './components/floating-cart/floating-cart.
     HomeComponent,
     TopMenuComponent,
     ProductComponent,
-    FloatingCartComponent
+    FloatingCartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
