@@ -2,18 +2,18 @@
   <div class="form-body">
     <div class="control">
       <label for="name">Name</label>
-      <input type="text" id="name" placeholder="your name"/>
+      <input type="text" id="name" placeholder="your name" [(ngModel)]="userData.name"/>
     </div>
     <div class="control">
       <label for="address">Address</label>
-      <textarea name="address" id="address" placeholder="enter your address"></textarea>
+      <textarea name="address" id="address" placeholder="enter your address" [(ngModel)]="userData.address"></textarea>
     </div>
     <div class="control">
       <label for="phone">Phone</label>
-      <input type="number" id="phone" placeholder="your phone number"/>
+      <input type="text" id="phone" placeholder="your phone number" [(ngModel)]="userData.phone"/>
     </div>
     <div class="submit">
-      <button (click)="changeState('payment')">Next</button>
+      <button (click)="changeState()">Next</button>
     </div>
   </div>
 </div>

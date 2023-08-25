@@ -3,9 +3,7 @@
   border: solid 1px #e6e6e6;
   border-radius: 5px;
   padding: 20px;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 20px;
+  width: 100%;
 }
 .form-body {
   .grid {
@@ -42,14 +40,20 @@
     display: flex;
     justify-content: flex-end;
     button {
+      width: 100%;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
-      background-color: var(--primary);
-      font-size: 1rem;
-      color: #fff;
+      font-size: 1.2rem;
+      color: var(--dark-gray);
+      box-shadow: 1px 1px 5px #ccc;
+      background-color: transparent;
       cursor: pointer;
       outline: none;
+    }
+    .action {
+      background-color: var(--primary);
+      color: #fff;
     }
   }
 

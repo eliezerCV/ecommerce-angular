@@ -3,13 +3,64 @@
 <div class="container">
   <div class="checkout">
     <div class="timeline">
-      <app-timeline ></app-timeline>
+      <app-timeline [state]="state"></app-timeline>
     </div>
-    <div class="form-shipping" *ngIf="state === 'shipping' ">
-      <app-form-shipping></app-form-shipping>
-    </div>
-    <div class="form-payment" *ngIf="state === 'payment'">
-      <app-form-payment></app-form-payment>
+    <div class="data">
+      <div class="col1">
+        <div class="user-data" *ngIf="state === 'payment'">
+          <div class="user-data-header">
+            <h3>Shipping Address</h3>
+            <a >edit</a>
+          </div>
+          <p>Name: <span>{{ userData.name }}</span></p>
+          <p>Address: <span>{{ userData.address }}</span></p>
+          <p>Phone: <span>{{ userData.phone }}</span></p>
+        </div>
+        <div class="form-shipping" *ngIf="state === 'shipping'">
+          <app-form-shipping (changeStateEvent)="changeStateEvent($event)"></app-form-shipping>
+        </div>
+
+        <div class="form-payment" *ngIf="state === 'payment'">
+          <app-form-payment></app-form-payment>
+        </div>
+      </div>
+
+      <div class="pay-section" *ngIf="state === 'payment'">
+        <div class="pay-header">
+          <h3>Shopping Cart</h3>
+          <a >edit</a>
+        </div>
+        <div class="pay-info">
+          <div class="pay-info-item">
+            <p>Subtotal</p>
+            <p>{{ '$5.25' }}</p>
+          </div>
+          <div class="pay-info-item">
+            <p>Shipping</p>
+            <p>{{ 'free' }}</p>
+          </div>
+          <div class="pay-info-item">
+            <p>Tax</p>
+            <p>{{ '$0.25' }}</p>
+          </div>
+          <div class="pay-info-item">
+            <span>Order Total</span>
+            <span>{{ '$5.50' }}</span>
+          </div>
+        </div>
+        <div class="items">
+          <div class="item">
+            <p>Cheese Buerger</p>
+            <p>1</p>
+            <p>{{ '$5.25' }}</p>
+          </div>
+          <div class="item">
+            <p>Cheese Buerger</p>
+            <p>1</p>
+            <p>{{ '$5.25' }}</p>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>

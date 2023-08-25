@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CheckoutState } from 'src/app/enums/checkou-state';
 import { UserData } from 'src/app/models/user-data';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserData } from 'src/app/models/user-data';
 })
 export class FormShippingComponent implements OnInit {
 
-  @Output() changeStateEvent = new EventEmitter<string>();
+  @Output() changeStateEvent = new EventEmitter<UserData>();
 
   userData: UserData = {
     name: '',
@@ -21,8 +22,20 @@ export class FormShippingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeState(state: string): void {
-    this.changeStateEvent.emit(state);
+  changeState(): void {
+    console.log(this.userData.name.length)
+    console.log(this.userData.address.length)
+    console.log(this.userData.phone.length)
+    if (!this.validateForm()) {
+      return;
+    }
+    this.changeStateEvent.emit(this.userData);
+  }
+
+  validateForm(): boolean {
+    return this.userData.name.length > 0 &&
+      this.userData.address.length > 0 &&
+      this.userData.phone.length > 0;
   }
 
 }
