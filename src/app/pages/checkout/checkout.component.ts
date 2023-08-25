@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
+  state = 'shipping';
+
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  changeStateEvent(state: string): void {
+    this.state = state;
   }
 
 }

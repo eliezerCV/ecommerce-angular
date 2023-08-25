@@ -1,0 +1,10 @@
+<div class="checkout-timeline">
+  <div class="step1" [class.disabled]="state === 'payment'">
+    <span class="step-number">1</span>
+    <p class="step-title">Shipping</p>
+  </div>
+  <div class="step2" [class.disabled]="state === 'shipping'">
+    <span class="step-number">2</span>
+    <p class="step-title">Payment</p>
+  </div>
+</div>

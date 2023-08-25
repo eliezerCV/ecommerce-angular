@@ -8,6 +8,9 @@ import { TopMenuComponent } from './shared/top-menu/top-menu.component';
 import { ProductComponent } from './components/product/product.component';
 import { FloatingCartComponent } from './components/floating-cart/floating-cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { TimelineComponent } from './pages/checkout/timeline/timeline.component';
+import { FormShippingComponent } from './pages/checkout/form-shipping/form-shipping.component';
+import { FormPaymentComponent } from './pages/checkout/form-payment/form-payment.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     TopMenuComponent,
     ProductComponent,
     FloatingCartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    TimelineComponent,
+    FormShippingComponent,
+    FormPaymentComponent
   ],
   imports: [
     BrowserModule,

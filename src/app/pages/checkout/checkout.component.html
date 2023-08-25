@@ -1,2 +1,15 @@
 <app-top-menu></app-top-menu>
-<p>checkout works!</p>
+
+<div class="container">
+  <div class="checkout">
+    <div class="timeline">
+      <app-timeline ></app-timeline>
+    </div>
+    <div class="form-shipping" *ngIf="state === 'shipping' ">
+      <app-form-shipping></app-form-shipping>
+    </div>
+    <div class="form-payment" *ngIf="state === 'payment'">
+      <app-form-payment></app-form-payment>
+    </div>
+
+  </div>

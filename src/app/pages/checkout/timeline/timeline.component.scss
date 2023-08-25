@@ -1,0 +1,46 @@
+.checkout-timeline {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  .step1, .step2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    span {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 5px 10px;
+      border-radius: 50%;
+    }
+    p {
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+  }
+  .disabled {
+    span {
+      background-color: #ccc;
+    }
+    p {
+      color: #ccc;
+    }
+  }
+  .divisor-line {
+    position: relative;
+    width: 200px;
+    height: 2px;
+    left: 150px;
+    background-color: var(--primary);
+  }
+  .separator {
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+  }
+  .step2 {
+
+  }
+}
