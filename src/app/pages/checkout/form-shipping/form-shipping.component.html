@@ -1,19 +1,34 @@
 <div class="form-shipping">
-  <div class="form-body">
+  <form (submit)="changeState()" class="form-body">
     <div class="control">
       <label for="name">Name</label>
-      <input type="text" id="name" placeholder="your name" [(ngModel)]="userData.name"/>
+      <input [class.valid-input]="name.valid && (name.dirty || name.touched)"
+        type="text" id="name" placeholder="your name" [formControl]="name" required/>
+
+      <div class="validations" *ngIf="name.invalid && (name.dirty || name.touched)">
+        <p class="error-message">the name field is required</p>
+      </div>
     </div>
     <div class="control">
       <label for="address">Address</label>
-      <textarea name="address" id="address" placeholder="enter your address" [(ngModel)]="userData.address"></textarea>
+      <textarea [class.valid-input]="address.valid && (address.dirty || address.touched)"
+        name="address" id="address" placeholder="enter your address" [formControl]="address"></textarea>
+
+      <div class="validations" *ngIf="address.invalid && (address.dirty || address.touched)">
+        <p class="error-message">the address field is required</p>
+      </div>
     </div>
     <div class="control">
       <label for="phone">Phone</label>
-      <input type="text" id="phone" placeholder="your phone number" [(ngModel)]="userData.phone"/>
+      <input [class.valid-input]="phone.valid && (phone.dirty || phone.touched)"
+         type="text" id="phone" placeholder="your phone number" [formControl]="phone"/>
+
+      <div class="validations" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+        <p class="error-message">must be 10 numeric characters, current: <span>{{ phone.value.length }}</span></p>
+      </div>
     </div>
     <div class="submit">
-      <button (click)="changeState()">Next</button>
+      <button type="submit" [class.disabled-action]="formData.invalid" [disabled]="formData.invalid">Next</button>
     </div>
-  </div>
+  </form>
 </div>
