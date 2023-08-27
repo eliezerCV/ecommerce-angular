@@ -1,27 +1,44 @@
 <div class="form-shipping">
-  <div class="form-body">
+  <form class="form" (submit)="onSubmit()">
     <div class="control">
       <label for="card-name">Card Name</label>
-      <input type="text" name="card-name" placeholder="the name on your card"/>
+      <input type="text" name="card-name"
+        [formControl]="name" placeholder="the name on your card"/>
+      <div class="validations" *ngIf="name.invalid && name.touched">
+        <span >Card Name is required</span>
+      </div>
     </div>
     <div class="control">
       <label for="card-number">Card Number</label>
-      <input name="address" name="card-number" placeholder="your card number">
+      <input name="address" name="card-number"
+        [formControl]="cardNumber" placeholder="your card number">
+      <div class="validations" *ngIf="cardNumber.invalid && cardNumber.touched">
+        <span >Card Number must be 16 numerics characters, current: <span>{{ cardNumber.value.length }}</span></span>
+      </div>
     </div>
     <div class="grid">
       <div class="control">
         <label for="card-exp">Expiration</label>
-        <input type="text" id="card-ext" placeholder="expiration date"/>
+        <input type="text" id="card-ext"
+          [formControl]="expiration" placeholder="expiration date: 05/25"/>
+        <div class="validations" *ngIf="expiration.invalid && expiration.touched">
+          <span >must be mm/yy(03/25)</span>
+        </div>
       </div>
       <div class="control">
         <label for="card-cvc">CVC</label>
-        <input type="text" id="card-cvc" placeholder="the cvc on your card"/>
+        <input type="text" id="card-cvc"
+          [formControl]="cvv" placeholder="the cvc on your card"/>
+        <div class="validations" *ngIf="cvv.invalid && cvv.touched">
+          <span >CVC is required</span>
+        </div>
       </div>
     </div>
 
     <div class="submit">
-      <!-- <button>Back</button> -->
-      <button class="action">Place Order</button>
+      <button type="submit" [class.disabled]="!payForm.valid" [disabled]="!payForm.valid">Place Order</button>
     </div>
-  </div>
+  </form>
 </div>
+
+<app-loading *ngIf="processingOrder"></app-loading>

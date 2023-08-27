@@ -13,6 +13,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { TimelineComponent } from './pages/checkout/timeline/timeline.component';
 import { FormShippingComponent } from './pages/checkout/form-shipping/form-shipping.component';
 import { FormPaymentComponent } from './pages/checkout/form-payment/form-payment.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormPaymentComponent } from './pages/checkout/form-payment/form-payment
     CheckoutComponent,
     TimelineComponent,
     FormShippingComponent,
-    FormPaymentComponent
+    FormPaymentComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
