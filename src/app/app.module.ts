@@ -14,6 +14,7 @@ import { TimelineComponent } from './pages/checkout/timeline/timeline.component'
 import { FormShippingComponent } from './pages/checkout/form-shipping/form-shipping.component';
 import { FormPaymentComponent } from './pages/checkout/form-payment/form-payment.component';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { ModalFeedbackComponent } from './pages/checkout/modal-feedback/modal-feedback.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoadingComponent } from './shared/loading/loading.component';
     TimelineComponent,
     FormShippingComponent,
     FormPaymentComponent,
-    LoadingComponent
+    LoadingComponent,
+    ModalFeedbackComponent
   ],
   imports: [
     BrowserModule,

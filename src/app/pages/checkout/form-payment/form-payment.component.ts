@@ -9,12 +9,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class FormPaymentComponent implements OnInit {
 
   processingOrder: boolean = false;
+  showModalFeedback: boolean = false;
 
   payForm = new FormGroup({
-    name: new FormControl('', Validators.required),
+    name: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
     cardNumber: new FormControl('', [Validators.required, Validators.minLength(16)]),
-    expiration: new FormControl('', Validators.required),
-    cvv: new FormControl('', Validators.required),
+    expMonth: new FormControl('', Validators.required),
+    expYear: new FormControl('', Validators.required),
+    cvc: new FormControl('', [Validators.required, Validators.minLength(3)]),
   });
 
   constructor() { }
@@ -23,16 +25,23 @@ export class FormPaymentComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.payForm.value);
     this.processingOrder = true;
     setTimeout(() => {
       this.processingOrder = false;
-    }, 3000);
+      this.showModalFeedback = true;
+    }, 1000);
+  }
+
+  closeModalFeedBack() {
+    this.showModalFeedback = false;
   }
 
   get name() { return this.payForm.get('name') as FormControl; }
   get cardNumber() { return this.payForm.get('cardNumber') as FormControl; }
-  get expiration() { return this.payForm.get('expiration') as FormControl; }
-  get cvv() { return this.payForm.get('cvv') as FormControl; }
+  get expm() { return this.payForm.get('expMonth') as FormControl; }
+  get expy() { return this.payForm.get('expYear') as FormControl; }
+  get cvc() { return this.payForm.get('cvc') as FormControl; }
 
 
 }
