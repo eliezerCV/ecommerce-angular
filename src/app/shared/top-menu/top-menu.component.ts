@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class TopMenuComponent implements OnInit {
 
-  count: number = 2;
+  cartItemsCount: number = 0;
   selectedCategory: string = 'burgers';
   floatingCart: boolean = false;
   currentRoute: string = '';

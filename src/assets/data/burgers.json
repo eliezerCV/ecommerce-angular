@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Hamburguesa Clásica",
+    "price": 5.99,
+    "image": "assets/img/burger.png"
+  },
+  {
+    "id": 2,
+    "name": "Hamburguesa con Queso",
+    "price": 6.99,
+    "image": "assets/img/burger.png"
+  },
+  {
+    "id": 3,
+    "name": "Hamburguesa BBQ",
+    "price": 7.49,
+    "image": "assets/img/burger.png"
+  },
+  {
+    "id": 4,
+    "name": "Hamburguesa Vegetariana",
+    "price": 6.49,
+    "image": "assets/img/burger.png"
+  },
+  {
+    "id": 5,
+    "name": "Hamburguesa Doble",
+    "price": 8.99,
+    "image": "assets/img/burger.png"
+  },
+  {
+    "id": 6,
+    "name": "Hamburguesa Picante",
+    "price": 7.99,
+    "image": "assets/img/burger.png"
+  },
+  {
+    "id": 7,
+    "name": "Hamburguesa con Huevo",
+    "price": 7.49,
+    "image": "assets/img/burger.png"
+  },
+  {
+    "id": 8,
+    "name": "Hamburguesa Deluxe",
+    "price": 9.49,
+    "image": "assets/img/burger.png"
+  }
+]

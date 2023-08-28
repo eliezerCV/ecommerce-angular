@@ -9,7 +9,7 @@ import { UserData } from 'src/app/models/user-data';
 })
 export class CheckoutComponent implements OnInit {
 
-  state = CheckoutState.Payment;
+  state = CheckoutState.Shipping;
   userData: UserData = {
     name: '',
     address: '',

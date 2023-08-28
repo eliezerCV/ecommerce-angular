@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Cola Clásica",
+    "price": 1.99,
+    "image": "assets/img/cola.png"
+  },
+  {
+    "id": 2,
+    "name": "Cola Zero",
+    "price": 1.99,
+    "image": "assets/img/cola.png"
+  },
+  {
+    "id": 3,
+    "name": "Cola Cherry",
+    "price": 2.49,
+    "image": "assets/img/cola.png"
+  },
+  {
+    "id": 4,
+    "name": "Cola Vainilla",
+    "price": 2.49,
+    "image": "assets/img/cola.png"
+  },
+  {
+    "id": 5,
+    "name": "Cola Limón",
+    "price": 2.49,
+    "image": "assets/img/cola.png"
+  },
+  {
+    "id": 6,
+    "name": "Cola Naranja",
+    "price": 2.49,
+    "image": "assets/img/cola.png"
+  },
+  {
+    "id": 7,
+    "name": "Cola Manzana",
+    "price": 2.49,
+    "image": "assets/img/cola.png"
+  },
+  {
+    "id": 8,
+    "name": "Cola Uva",
+    "price": 2.49,
+    "image": "assets/img/cola.png"
+  }
+]

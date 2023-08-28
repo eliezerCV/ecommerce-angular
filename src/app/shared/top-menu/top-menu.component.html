@@ -14,7 +14,7 @@
   <div class="top-menu-cart" *ngIf="currentRoute === '/home'">
     <button (click)="openFloatingCart()" [class.selected-cart]="floatingCart">
       <i class="ri-shopping-cart-line"></i>
-      <span class="cart-count">{{ count }}</span>
+      <span class="cart-count">{{ cartItemsCount }}</span>
     </button>
   </div>
 </div>
